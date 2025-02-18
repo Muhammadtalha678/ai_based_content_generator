@@ -8,6 +8,9 @@ const UserSchema = new Schema({
     password: { type: String, required: true },
     role: { type: string, enum: ['admin', 'user'] },
     avatar:{type:string}
+},
+    {
+    timestamps:true
 })
 
 const UserModal = mongoose.model('users', UserSchema)
